@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "NotebookLM Mastery Course",
   description: "Master Google's AI-powered research tool in 7 comprehensive lessons",
-    generator: 'v0.dev'
+    generator: 'code with me'
 }
 
 export default function RootLayout({
