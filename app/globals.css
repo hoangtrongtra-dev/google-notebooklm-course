@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 120 100% 97%; /* #F0FDF4 */
+    --foreground: 210 11% 15%; /* #1F2937 */
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 210 11% 15%; /* #1F2937 */
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 15%;
+    --primary: 158 64% 52%; /* #10B981 */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 100%; /* #FFFFFF */
+    --secondary-foreground: 210 11% 15%;
+    --muted: 120 60% 90%; /* #D1FAE5 */
+    --muted-foreground: 210 11% 35%;
+    --accent: 158 64% 52%; /* #10B981 */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 120 60% 90%; /* #D1FAE5 */
+    --input: 120 60% 90%;
+    --ring: 158 64% 52%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 210 11% 15%;
+    --foreground: 0 0% 98%;
+    --card: 210 11% 15%;
+    --card-foreground: 0 0% 98%;
+    --popover: 210 11% 15%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 158 64% 52%;
+    --primary-foreground: 210 11% 15%;
+    --secondary: 210 11% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 210 11% 20%;
+    --muted-foreground: 210 11% 65%;
+    --accent: 158 64% 52%;
+    --accent-foreground: 210 11% 15%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 11% 20%;
+    --input: 210 11% 20%;
+    --ring: 158 64% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    min-height: 100vh;
+  }
+
+  .dark body {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  }
+}
+
+/* Modern glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(209, 250, 229, 0.5);
+}
+
+.dark .glass {
+  background: rgba(31, 41, 55, 0.8);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* Modern gradient */
+.gradient-modern {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.gradient-soft {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+
+/* Smooth animations */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modern shadows */
+.shadow-modern {
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.1), 0 10px 10px -5px rgba(16, 185, 129, 0.04);
+}
+
+.shadow-modern-lg {
+  box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.15);
+}
+
+/* Custom green tones */
+.bg-green-light {
+  background-color: #f0fdf4;
+}
+
+.bg-green-soft {
+  background-color: #ecfdf5;
+}
+
+.bg-green-border {
+  background-color: #d1fae5;
+}
+
+.text-green-accent {
+  color: #10b981;
+}
+
+.border-green-soft {
+  border-color: #d1fae5;
+}
